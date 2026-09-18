@@ -23,8 +23,8 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Installer le SDK Android
-        uses: android-actions/setup-android@v3
+      - name: Accepter les licences du SDK Android (deja present sur le serveur)
+        run: yes | sdkmanager --licenses || true
 
       - name: Installer les dependances
         run: npm install
