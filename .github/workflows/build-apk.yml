@@ -32,9 +32,6 @@ jobs:
       - name: Ajouter la plateforme Android
         run: npx cap add android
 
-      - name: Retirer la permission internet (application 100% hors ligne)
-        run: sed -i '/android.permission.INTERNET/d' android/app/src/main/AndroidManifest.xml
-
       - name: Synchroniser le projet
         run: npx cap sync android
 
